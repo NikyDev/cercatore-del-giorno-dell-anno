@@ -1,0 +1,225 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Venturi.Nicolas._3j.giorni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int anno = 0, giorno = 0, tran, scelta, div, div1, div2, pr;
+            string strAnno, strGiorno, strScelta, nomeg;
+            Console.WriteLine("inserisci 1 se vuoi scoprire che giorno è da un numero da 1 a 366, o 2 se vuoi scoprire il giorno della settimana dal numero del giorno");
+            strScelta = Console.ReadLine();
+            scelta = Convert.ToInt32(strScelta);
+            if (scelta == 1)
+            { 
+            do
+            {
+                Console.WriteLine("inserisci un anno dopo il 1582");
+                strAnno = Console.ReadLine();
+                     anno = Convert.ToInt32(strAnno);
+                } while (anno < 1582);
+
+            if (anno % 4 == 0 && anno % 100 != 0 || anno % 400 == 0)
+            {
+                Console.WriteLine("inserisci un numero tra 1 e 366 per scoprire la data");
+                strGiorno = Console.ReadLine();
+                int v = giorno = Convert.ToInt32(strGiorno);
+                if(giorno>1 && giorno<31)
+                {
+                    Console.WriteLine("la data del giorno inserito è " + giorno + " gennaio " + anno);
+                }
+                if (giorno > 31 && giorno < 60)
+                {
+                    tran = giorno - 31;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " febbraio " + anno);
+                }
+                if (giorno > 60 && giorno < 91)
+                {
+                    tran = giorno - 60;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " marzo " + anno);
+                }
+                if (giorno > 91 && giorno < 121)
+                {
+                    tran = giorno - 91;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " aprile " + anno);
+                }
+                if (giorno > 121 && giorno < 152)
+                {
+                    tran = giorno - 121;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " maggio " + anno);
+                }
+                if (giorno > 152 && giorno < 182)
+                {
+
+                    tran = giorno - 152; 
+                    Console.WriteLine("la data del giorno inserito è " + tran + " giugno " + anno);
+                }
+                if (giorno > 182 && giorno < 213)
+                {
+
+                    tran = giorno - 182; 
+                    Console.WriteLine("la data del giorno inserito è " + tran + " luglio " + anno);
+                }
+                if (giorno > 213 && giorno < 244)
+                {
+                    tran = giorno - 213;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " agosto " + anno);
+                }
+                if (giorno > 244 && giorno < 274)
+                {
+                    tran = giorno - 244; 
+                    Console.WriteLine("la data del giorno inserito è " + tran + " settembre " + anno);
+                }
+                if (giorno > 274 && giorno < 305)
+                {
+                    tran = giorno - 274; 
+                    Console.WriteLine("la data del giorno inserito è " + tran + " ottobre " + anno);
+                }
+                if (giorno > 305 && giorno < 335)
+                {
+                    tran = giorno - 305; 
+                    Console.WriteLine("la data del giorno inserito è " + tran + " novembre " + anno);
+                }
+                if (giorno > 335 && giorno < 366)
+                {
+                    tran = giorno - 335; 
+                    Console.WriteLine("la data del giorno inserito è " + tran + " dicembre " + anno);
+                }
+            }
+            else
+            {
+                Console.WriteLine("inserisci un numero tra 1 e 365 per scoprire la data");
+                strGiorno = Console.ReadLine();
+                int v = giorno = Convert.ToInt32(strGiorno);
+                if (giorno > 1 && giorno < 31)
+                {
+                    Console.WriteLine("la data del giorno inserito è " + giorno + " gennaio " + anno);
+                }
+                if (giorno > 31 && giorno < 59)
+                {
+                    tran = giorno - 31;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " febbraio " + anno);
+                }
+                if (giorno > 59 && giorno < 90)
+                {
+                    tran = giorno - 59;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " marzo " + anno);
+                }
+                if (giorno > 90 && giorno < 120)
+                {
+                    tran = giorno - 90;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " aprile " + anno);
+                }
+                if (giorno > 120 && giorno < 151)
+                {
+                    tran = giorno - 120;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " maggio " + anno);
+                }
+                if (giorno > 151 && giorno < 181)
+                {
+
+                    tran = giorno - 151;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " giugno " + anno);
+                }
+                if (giorno > 181 && giorno < 212)
+                {
+
+                    tran = giorno - 181;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " luglio " + anno);
+                }
+                if (giorno > 212 && giorno < 243)
+                {
+                    tran = giorno - 212;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " agosto " + anno);
+                }
+                if (giorno > 243 && giorno < 273)
+                {
+                    tran = giorno - 243;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " settembre " + anno);
+                }
+                if (giorno > 273 && giorno < 304)
+                {
+                    tran = giorno - 273;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " ottobre " + anno);
+                }
+                if (giorno > 304 && giorno < 334)
+                {
+                    tran = giorno - 304;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " novembre " + anno);
+                }
+                if (giorno > 334 && giorno < 365)
+                {
+                    tran = giorno - 334;
+                    Console.WriteLine("la data del giorno inserito è " + tran + " dicembre " + anno);
+                }
+            }
+            }
+            else
+            {
+                do
+                {
+                    Console.WriteLine("inserisci un anno dopo il 1582");
+                    strAnno = Console.ReadLine();
+                    anno = Convert.ToInt32(strAnno);
+                } while (anno < 1582);
+               
+                Console.WriteLine("inserisci un numero tra 1 e 365 per scoprire che giorno è");
+                strGiorno = Console.ReadLine();
+                int v = giorno = Convert.ToInt32(strGiorno);
+                div = (anno - 1) / 4;
+                div1 = (anno - 1) / 100;
+                div2 = (anno - 1) / 400;
+                pr = anno + div - div1 + div2 + giorno;
+                pr = pr % 7;
+                switch (pr)
+                {
+                    case 0:
+                        nomeg = "sabato";
+                        Console.WriteLine(nomeg);
+                        break;
+
+                    case 1:
+                        nomeg = "domenica";
+                        Console.WriteLine(nomeg);
+                        break;
+
+                    case 2:
+                        nomeg = "lunedì";
+                        Console.WriteLine(nomeg);
+                        break;
+
+                    case 3:
+                        nomeg = "martedì";
+                        Console.WriteLine(nomeg);
+                        break;
+
+                    case 4:
+                        nomeg = "mercoledì";
+                        Console.WriteLine(nomeg);
+                        break;
+
+                    case 5:
+                        nomeg = "giovedì";
+                        Console.WriteLine(nomeg);
+                        break;
+
+                    case 6:
+                        nomeg = "venerdì";
+                        Console.WriteLine(nomeg);
+                        break;
+                    }
+                
+               
+            }
+            Console.ReadLine();
+
+
+
+        }
+    }
+}
